@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #0f3460;
+    --highlight-color: #e94560;
+    --text-color: #ffffff;
+    --text-secondary: #b8b8b8;
+    --card-bg: #16213e;
+    --border-color: #0f3460;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* 헤더 섹션 */
+.hero-section {
+    position: relative;
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+    box-shadow: var(--shadow);
+}
+
+.hero-image-container {
+    max-width: 1200px;
+    height: 260px;
+    margin: 0 auto 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.main-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #f3f4f6;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    margin-top: 0.8rem;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* 섹션 */
+.section {
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    border-left: 4px solid var(--highlight-color);
+    padding-left: 1rem;
+}
+
+/* 다운로드 박스 */
+.download-box {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.download-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.download-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--highlight-color) 0%, #c73650 100%);
+    color: var(--text-color);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+}
+
+/* 이벤트 박스 */
+.event-box {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--accent-color) 100%);
+    border: 2px solid var(--highlight-color);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.event-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--highlight-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(233, 69, 96, 0.5);
+}
+
+.event-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.event-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+ .coupon-guide {
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+    background: rgba(15, 52, 96, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.coupon-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--border-color);
+}
+
+.coupon-caption {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.official-event-box {
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.85) 0%, rgba(22, 33, 62, 0.85) 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.official-event-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.official-event-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--highlight-color) 0%, #c73650 100%);
+    color: var(--text-color);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
+
+.official-event-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+}
+
+.discord-box {
+    position: relative;
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.18) 0%, rgba(64, 78, 214, 0.25) 100%);
+    border: 2px solid rgba(88, 101, 242, 0.6);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.discord-status {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.discord-status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3ad66b;
+    box-shadow: 0 0 8px rgba(58, 214, 107, 0.7);
+}
+
+.discord-status-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.discord-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.discord-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+    color: var(--text-color);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+}
+
+.discord-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+}
+
+/* 연맹 정보 */
+.alliance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-box {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.info-text {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+.highlight-box {
+    background: rgba(233, 69, 96, 0.2);
+    color: var(--highlight-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.guide-box {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.guide-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.guide-steps {
+    padding-left: 1.5rem;
+    line-height: 2;
+}
+
+.guide-steps li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.warning-box {
+    background: rgba(233, 69, 96, 0.1);
+    border: 2px solid var(--highlight-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.warning-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* 코드 섹션 */
+.codes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.code-section {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.code-section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.code-item {
+    background: rgba(15, 52, 96, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.code-item:hover {
+    background: rgba(15, 52, 96, 0.5);
+    transform: translateX(5px);
+    border-color: var(--highlight-color);
+}
+
+.code-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    user-select: all;
+}
+
+.code-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.copy-instruction {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(233, 69, 96, 0.1);
+    border-radius: 8px;
+    border: 1px dashed var(--highlight-color);
+}
+
+.copy-instruction p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* 푸터 */
+.footer {
+    background: var(--primary-color);
+    border-top: 2px solid var(--border-color);
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-credit {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .hero-image-container {
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .download-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .code-text {
+        font-size: 1rem;
+    }
+
+    .hero-image-container {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-image-container {
+        height: 160px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .download-box,
+    .event-box,
+    .code-section {
+        padding: 1rem;
+    }
+}
+
