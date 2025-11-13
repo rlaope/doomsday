@@ -175,6 +175,17 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.event-note {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    background: rgba(233, 69, 96, 0.12);
+    border: 1px solid rgba(233, 69, 96, 0.35);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #f5dada;
+}
+
 .coupon-guide {
     margin: 1.5rem 0 2rem;
     text-align: center;
