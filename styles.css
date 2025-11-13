@@ -510,6 +510,29 @@ body {
     color: var(--text-secondary);
 }
 
+.tips-callout {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.12) 0%, rgba(88, 101, 242, 0.18) 100%);
+    border: 1px solid rgba(233, 69, 96, 0.35);
+    box-shadow: var(--shadow);
+}
+
+.tips-callout-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--highlight-color);
+}
+
+.tips-callout-quote {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
 /* 푸터 */
 .footer {
     background: var(--primary-color);
