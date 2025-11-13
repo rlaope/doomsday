@@ -526,11 +526,40 @@ body {
     color: var(--highlight-color);
 }
 
-.tips-callout-quote {
+.tips-chat-bubble {
+    position: relative;
+    background: rgba(22, 33, 62, 0.75);
+    border: 1px solid rgba(88, 101, 242, 0.4);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem 1.1rem;
+    box-shadow: inset 0 0 18px rgba(88, 101, 242, 0.18);
+}
+
+.tips-chat-bubble + .tips-chat-bubble {
+    margin-top: 1rem;
+}
+
+.tips-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.9rem;
+}
+
+.tips-user {
+    font-weight: 700;
+    color: #9db4ff;
+}
+
+.tips-time {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tips-chat-message {
     font-size: 0.98rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    font-style: italic;
 }
 
 /* 푸터 */
