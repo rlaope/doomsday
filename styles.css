@@ -650,6 +650,13 @@ body {
     color: var(--highlight-color);
 }
 
+.tips-callout-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+}
+
 .tips-chat-bubble {
     position: relative;
     background: rgba(22, 33, 62, 0.75);
