@@ -1,6 +1,7 @@
 // 코드 복사 기능
 document.addEventListener('DOMContentLoaded', function() {
     const codeItems = document.querySelectorAll('.code-item');
+    const featuredCode = document.querySelector('.featured-code');
     const quickNavItems = document.querySelectorAll('.quick-nav-item');
     const sectionIdsForNav = Array.from(quickNavItems).map(item => item.dataset.target);
     
@@ -44,6 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    if (featuredCode) {
+        featuredCode.addEventListener('click', () => {
+            const code = featuredCode.textContent.trim();
+            navigator.clipboard.writeText(code).then(() => {
+                featuredCode.classList.add('copied');
+                setTimeout(() => featuredCode.classList.remove('copied'), 1500);
+            }).catch(err => {
+                console.error('복사 실패:', err);
+                alert('코드를 수동으로 복사해주세요: ' + code);
+            });
+        });
+    }
     
     // 빠른 이동 리모컨 클릭 시 스무스 스크롤
     quickNavItems.forEach(item => {
