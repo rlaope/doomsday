@@ -438,6 +438,16 @@ body {
     line-height: 1.8;
 }
 
+.info-text.notice {
+    margin-top: 0.5rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    background: rgba(233, 69, 96, 0.12);
+    border: 1px solid rgba(233, 69, 96, 0.35);
+    color: #f5dada;
+    font-size: 1rem;
+}
+
 .highlight-box {
     background: rgba(233, 69, 96, 0.2);
     color: var(--highlight-color);
