@@ -1,6 +1,8 @@
 // 코드 복사 기능
 document.addEventListener('DOMContentLoaded', function() {
     const codeItems = document.querySelectorAll('.code-item');
+    const quickNavItems = document.querySelectorAll('.quick-nav-item');
+    const sectionIdsForNav = Array.from(quickNavItems).map(item => item.dataset.target);
     
     codeItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -43,6 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // 빠른 이동 리모컨 클릭 시 스무스 스크롤
+    quickNavItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetId = this.dataset.target;
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    const setActiveNav = (sectionId) => {
+        if (!sectionIdsForNav.includes(sectionId)) return;
+        quickNavItems.forEach(item => {
+            item.classList.toggle('active', item.dataset.target === sectionId);
+        });
+    };
+
     // 스크롤 애니메이션
     const observerOptions = {
         threshold: 0.1,
@@ -54,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                setActiveNav(entry.target.id);
             }
         });
     }, observerOptions);
@@ -65,6 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
+
+    // 초기 활성화 상태 설정
+    setActiveNav(sectionIdsForNav[0]);
 });
 
 // CSS 애니메이션 추가
