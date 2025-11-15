@@ -266,6 +266,12 @@ body {
     font-size: 1rem;
 }
 
+.detail-value a {
+    color: #ffe69a;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 .mega-event-footer {
     font-size: 0.95rem;
     line-height: 1.8;
@@ -310,11 +316,25 @@ body {
     margin-bottom: 1.3rem;
 }
 
-.payback-note a {
-    color: #c7d2fe;
+.payback-links {
+    margin-top: 1rem;
+}
+
+.payback-links a {
+    color: #ffd3b6;
+    text-decoration: underline;
     font-weight: 600;
-    margin-top: 0.4rem;
+}
+
+.event-note .cert-link {
     display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-weight: 600;
 }
 
 .payback-footer {
