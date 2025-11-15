@@ -25,18 +25,6 @@ body {
     min-height: 100vh;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.04);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 /* 빠른 이동 리모컨 */
 .quick-nav {
     position: fixed;
@@ -201,6 +189,140 @@ body {
     box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
 }
 
+.download-link-text {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.download-link-text a {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+/* 대규모 이벤트 */
+.mega-event-box {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(17, 24, 39, 0.85) 100%);
+    border: 2px solid rgba(255, 107, 107, 0.5);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--shadow-hover);
+}
+
+.mega-event-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.mega-event-callout {
+    background: rgba(233, 69, 96, 0.15);
+    border: 1px solid rgba(233, 69, 96, 0.4);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.callout-title {
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--highlight-color);
+}
+
+.callout-text {
+    font-size: 1rem;
+}
+
+.callout-text a {
+    color: #ffd166;
+    text-decoration: underline;
+}
+
+.mega-event-details,
+.payback-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    background: rgba(15, 52, 96, 0.3);
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+}
+
+.detail-label {
+    font-weight: 700;
+    color: #a5b4fc;
+    margin-bottom: 0.3rem;
+}
+
+.detail-value {
+    font-size: 1rem;
+}
+
+.mega-event-footer {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* 페이백 이벤트 */
+.payback-box {
+    background: linear-gradient(135deg, rgba(24, 24, 34, 0.95) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 2px solid rgba(94, 234, 212, 0.4);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.payback-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.payback-warning {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.payback-warning a {
+    color: #6ee7b7;
+    text-decoration: underline;
+}
+
+.payback-note {
+    background: rgba(88, 101, 242, 0.12);
+    border: 1px solid rgba(88, 101, 242, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.3rem;
+}
+
+.payback-note a {
+    color: #c7d2fe;
+    font-weight: 600;
+    margin-top: 0.4rem;
+    display: inline-block;
+}
+
+.payback-footer {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
 /* 이벤트 박스 */
 .event-box {
     background: linear-gradient(135deg, var(--card-bg) 0%, var(--accent-color) 100%);
@@ -248,81 +370,9 @@ body {
     color: #f5dada;
 }
 
-.coupon-guide {
-    margin: 1.5rem 0 2rem;
-    text-align: center;
-    background: rgba(15, 52, 96, 0.3);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-}
+ 
 
-.coupon-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--border-color);
-}
-
-.coupon-caption {
-    margin-top: 0.8rem;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-}
-
-.featured-coupon {
-    margin: 2rem 0;
-    padding: 1.8rem;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(88, 101, 242, 0.25) 0%, rgba(22, 33, 62, 0.6) 100%);
-    border: 1px solid rgba(88, 101, 242, 0.5);
-    box-shadow: var(--shadow);
-    text-align: center;
-}
-
-.featured-coupon-label {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #c7d2fe;
-    margin-bottom: 1rem;
-}
-
-.featured-code {
-    display: inline-block;
-    font-family: 'Courier New', monospace;
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    color: #ffffff;
-    background: rgba(15, 23, 42, 0.65);
-    padding: 0.7rem 2.4rem;
-    border-radius: 12px;
-    border: 2px solid rgba(129, 140, 248, 0.7);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
-    cursor: pointer;
-    user-select: all;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
-}
-
-.featured-code:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(59, 130, 246, 0.45);
-    border-color: rgba(129, 140, 248, 0.9);
-}
-
-.featured-code.copied {
-    animation: pulse 0.4s ease-in-out 2;
-    border-color: rgba(94, 234, 212, 0.9);
-    box-shadow: 0 14px 32px rgba(45, 212, 191, 0.45);
-}
-
-.featured-coupon-note {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: var(--text-secondary);
-}
+ 
 
 .tips-list {
     display: flex;
@@ -384,6 +434,32 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     color: #9db4ff;
+}
+
+/* 동영상 섹션 */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #000;
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .official-event-box {
@@ -560,79 +636,7 @@ body {
 }
 
 /* 코드 섹션 */
-.codes-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.code-section {
-    background: var(--card-bg);
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-}
-
-.code-section-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--highlight-color);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-
-.code-item {
-    background: rgba(15, 52, 96, 0.3);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.code-item:hover {
-    background: rgba(15, 52, 96, 0.5);
-    transform: translateX(5px);
-    border-color: var(--highlight-color);
-}
-
-.code-text {
-    font-family: 'Courier New', monospace;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--highlight-color);
-    background: rgba(0, 0, 0, 0.3);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    display: inline-block;
-    user-select: all;
-}
-
-.code-note {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-style: italic;
-}
-
-.copy-instruction {
-    text-align: center;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(233, 69, 96, 0.1);
-    border-radius: 8px;
-    border: 1px dashed var(--highlight-color);
-}
-
-.copy-instruction p {
-    font-size: 1rem;
-    color: var(--text-secondary);
-}
+ 
 
 .tips-callout {
     margin-top: 2rem;
@@ -641,13 +645,6 @@ body {
     background: linear-gradient(135deg, rgba(233, 69, 96, 0.12) 0%, rgba(88, 101, 242, 0.18) 100%);
     border: 1px solid rgba(233, 69, 96, 0.35);
     box-shadow: var(--shadow);
-}
-
-.tips-callout-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    color: var(--highlight-color);
 }
 
 .tips-callout-desc {
