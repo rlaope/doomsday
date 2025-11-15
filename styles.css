@@ -208,6 +208,7 @@ body {
     border-radius: 18px;
     padding: 2rem;
     box-shadow: var(--shadow-hover);
+    position: relative;
 }
 
 .mega-event-intro {
@@ -285,6 +286,7 @@ body {
     border-radius: 18px;
     padding: 2rem;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .payback-intro {
