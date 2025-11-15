@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const quickNavItems = document.querySelectorAll('.quick-nav-item');
     const sectionIdsForNav = Array.from(quickNavItems).map(item => item.dataset.target);
+    const countdownEl = document.querySelector('.countdown');
 
     // 빠른 이동 리모컨 클릭 시 스무스 스크롤
     quickNavItems.forEach(item => {
@@ -46,6 +47,40 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
+
+    if (countdownEl) {
+        const targetDate = new Date(countdownEl.dataset.targetDate);
+        const valueEls = countdownEl.querySelectorAll('.countdown-value');
+
+        const updateCountdown = () => {
+            const now = new Date();
+            let diff = targetDate - now;
+
+            if (diff < 0) {
+                diff = 0;
+            }
+
+            const seconds = Math.floor(diff / 1000) % 60;
+            const minutes = Math.floor(diff / (1000 * 60)) % 60;
+            const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+            valueEls.forEach(el => {
+                const unit = el.dataset.unit;
+                let value = '--';
+                if (diff > 0 || unit === 'seconds') {
+                    value = unit === 'days' ? days
+                        : unit === 'hours' ? hours
+                        : unit === 'minutes' ? minutes
+                        : seconds;
+                }
+                el.textContent = String(value).padStart(2, '0');
+            });
+        };
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }
 
     // 초기 활성화 상태 설정
     setActiveNav(sectionIdsForNav[0]);

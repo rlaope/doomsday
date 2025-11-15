@@ -211,6 +211,45 @@ body {
     position: relative;
 }
 
+.countdown {
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    font-weight: 700;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.countdown-value {
+    font-size: 1.4rem;
+}
+
+.countdown-unit {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .mega-event-intro {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -390,6 +429,12 @@ body {
     border-radius: 8px;
     font-size: 0.95rem;
     color: #f5dada;
+}
+
+.event-note a {
+    color: #ffe69a;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
  
